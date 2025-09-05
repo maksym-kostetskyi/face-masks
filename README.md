@@ -1,5 +1,7 @@
 # Face Masks
 
+Live demo: https://maksym-kostetskyi.github.io/face-masks/
+
 ## Technologies Used
 
 - Gulp
