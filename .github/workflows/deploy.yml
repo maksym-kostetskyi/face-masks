@@ -1,0 +1,27 @@
+name: Deploy to GitHub Pages
+
+# Запускати цей сценарій при кожному пуші у гілку main
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Крок 1: Отримуємо код з репозиторію
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      # Крок 2: Встановлюємо Node.js, залежності та збираємо проєкт
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run build
+
+      # Крок 3: Деплоїмо зібрану папку 'dist' у гілку 'gh-pages'
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages # Гілка для публікації
+          folder: dist    # Папка, яку потрібно опублікувати
