@@ -1,0 +1,151 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin-left: calc((100vw - $max-width) / -2);
+  bottom: 0;
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $accent-color;
+    padding: 40px calc((100vw - $max-width) / 2);
+  }
+
+  &__address {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__icon {
+    width: auto;
+    height: 25px;
+  }
+
+  &__line {
+    height: 40px;
+    border-left: 1px solid white;
+  }
+
+  &__bottom {
+    background-color: rgb(242, 240, 240);
+    padding: 130px;
+  }
+
+  &__container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__info {
+    flex: 2;
+  }
+
+  &__logo-placeholder {
+    width: 200px;
+    height: 60px;
+    background-color: #d0d0d0;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    color: black;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  &__nav {
+    flex: 1;
+  }
+
+  &__nav-title {
+    color: black;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  &__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__nav-item {
+    margin-bottom: 10px;
+  }
+
+  &__nav-link {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    &:hover {
+      color: black;
+      text-decoration: underline;
+    }
+  }
+
+  &__social {
+    flex: 1;
+  }
+
+  &__social-title {
+    color: black;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  &__social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    padding-left: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 4px;
+      height: 90%;
+      background: linear-gradient(to bottom, #a0c4ff, #4a69bd);
+      border-radius: 2px;
+    }
+  }
+
+  &__social-item {
+    margin-bottom: 10px;
+  }
+
+  &__social-link {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    &:hover {
+      color: black;
+    }
+  }
+
+  &__copyright {
+    background-color: rgb(242, 240, 240);
+    padding: 20px 0;
+    border-top: 1px solid #dee2e6;
+  }
+
+  &__copyright-text {
+    color: black;
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+  }
+}

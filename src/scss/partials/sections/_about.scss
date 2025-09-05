@@ -1,0 +1,21 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-bottom: 80px;
+
+  &__wrapper {
+    display: flex;
+    gap: 47px;
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__text {
+    line-height: 30px;
+  }
+}
